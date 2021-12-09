@@ -29,29 +29,33 @@ body{
 // Navigation
 .nav-items {
 background-color: #4c4c4c;
+padding: 10px;
+margin-bottom: 12px;
   &__link {
     text-align: center;
     color: #fff;
     text-decoration: none;
+    transition: 1s;
   }
 }
-.nav-item {
-  text-decoration: none;
-  &:hover {
-  background-color: yellow;
-  }
-}
+// .nav-item {
+//   text-decoration: none;
+//   &:hover {
+//   background-color: yellow;
+//   }
+// }
 .nav-link { 
-  a {
-    color:#fff;
-  } 
+  // a {
+  //   color:#fff;
+  // } 
   &:hover {
   color: #000;
   font-weight: bold;
   background-color: yellow;
-    a {
-      color: #000;
-    }
+  border-radius: 10px;
+    // a {
+    //   color: #000;
+    // }
   }
 }
 
@@ -70,12 +74,12 @@ background-color: #4c4c4c;
     width: auto;
     z-index: 2;
     border-radius: 20px;
+    transition: 1s;
     &:hover{
       opacity: 1;
     }
   }
 }
-
 
 // Blocks
 .blocks{
@@ -95,7 +99,6 @@ background-color: #4c4c4c;
     color:blue;
   }
 }
-
 
 // Contacts
 .contact-container * {
@@ -224,5 +227,41 @@ background-color: #4c4c4c;
         right: 10px;
     }
 }
+
+// 3в
+.text3d-wrap-3 {
+  margin: 0;
+  padding: 0;
+  // background-color: #337AB7;
+  position: relative;
+  width: 60%;
+  // height: 260px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px 0 0 10% ;
+  .text3d-3 {
+    margin-top: -12px;
+    align-self: center;
+    transform: perspective(300px) rotateX(15deg) scaleY(0.8);
+    transition: all 0.5s;
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 90px;
+    letter-spacing: 3px;
+    color: #000;
+    text-shadow: 0 0 20px rgba(0, 0, 1000, 0.9), 0 10px 0 #ffff00;
+  }
+}
+
+.text3d-wrap-3:hover .text3d-3 {
+    transform: perspective(1000px) rotateX(15deg) scale(1.07);
+    text-shadow: 0 0 10px #ffff00, 0 2px 0 #ffff00;
+}
+@media (max-width:767px) {
+    .text3d-3 {
+        font-size: 60px;
+    }
+}
+
 
 

@@ -28,34 +28,23 @@ body {
 
 .nav-items {
   background-color: #4c4c4c;
+  padding: 10px;
+  margin-bottom: 12px;
 }
 
 .nav-items__link {
   text-align: center;
   color: #fff;
   text-decoration: none;
-}
-
-.nav-item {
-  text-decoration: none;
-}
-
-.nav-item:hover {
-  background-color: yellow;
-}
-
-.nav-link a {
-  color: #fff;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .nav-link:hover {
   color: #000;
   font-weight: bold;
   background-color: yellow;
-}
-
-.nav-link:hover a {
-  color: #000;
+  border-radius: 10px;
 }
 
 .carousel {
@@ -74,6 +63,8 @@ body {
   width: auto;
   z-index: 2;
   border-radius: 20px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .carousel__header:hover {
@@ -275,5 +266,51 @@ body {
   }
   .contact-btn {
     right: 10px;
+  }
+}
+
+.text3d-wrap-3 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0 0 10%;
+}
+
+.text3d-wrap-3 .text3d-3 {
+  margin-top: -12px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transform: perspective(300px) rotateX(15deg) scaleY(0.8);
+          transform: perspective(300px) rotateX(15deg) scaleY(0.8);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-family: Impact, Charcoal, sans-serif;
+  font-size: 90px;
+  letter-spacing: 3px;
+  color: #000;
+  text-shadow: 0 0 20px rgba(0, 0, 255, 0.9), 0 10px 0 #ffff00;
+}
+
+.text3d-wrap-3:hover .text3d-3 {
+  -webkit-transform: perspective(1000px) rotateX(15deg) scale(1.07);
+          transform: perspective(1000px) rotateX(15deg) scale(1.07);
+  text-shadow: 0 0 10px #ffff00, 0 2px 0 #ffff00;
+}
+
+@media (max-width: 767px) {
+  .text3d-3 {
+    font-size: 60px;
   }
 }
