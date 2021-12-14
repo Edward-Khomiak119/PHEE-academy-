@@ -1,8 +1,18 @@
 body{
   background-color: gray;
+  box-sizing: border-box;
+  // overflow-x: hidden;
+  // min-width:  800px;
 }
 .container{
   background-color: #fff;
+}
+a{
+  text-decoration: none;
+  color: black;
+  &:hover{
+    color: black;
+  }
 }
 
 
@@ -26,38 +36,107 @@ body{
   }
 }
 
-// Navigation
-.nav-items {
-background-color: #4c4c4c;
-padding: 10px;
-margin-bottom: 12px;
-  &__link {
-    text-align: center;
-    color: #fff;
-    text-decoration: none;
-    transition: 1s;
-  }
-}
+//  OLD Navigation
+// .nav-items {
+// background-color: #4c4c4c;
+// padding: 10px;
+// margin-bottom: 12px;
+//   &__link {
+//     text-align: center;
+//     color: black;
+//     text-decoration: none;
+//     transition: 1s;
+//   }
+// }
 // .nav-item {
 //   text-decoration: none;
 //   &:hover {
 //   background-color: yellow;
 //   }
 // }
-.nav-link { 
-  // a {
-  //   color:#fff;
-  // } 
-  &:hover {
-  color: #000;
-  font-weight: bold;
-  background-color: yellow;
-  border-radius: 10px;
-    // a {
-    //   color: #000;
-    // }
+// .nav-link { 
+//   a {
+//     color:#fff;
+//   } 
+//   &:hover {
+//   color: #000;
+//   font-weight: bold;
+//   background-color: yellow;
+//   border-radius: 10px;
+//     a {
+//       color: #000;
+//     }
+//   }
+// }
+
+
+// new NAVIGATION 
+
+.menu {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  padding: 10px 0;
+  margin-bottom: 12px;
+  background-color: #4c4c4c;
+  justify-content: space-evenly; 
+  border-radius: 20px; 
+  li{
+    // margin: auto; //растянуло блоки на всю ширину меню
+    position: relative;
+    
+    &:focus-within > .submenu,
+    &:hover > .submenu{
+      // display: flex;
+      clip: auto;
+      width: auto;
+      height: auto;
+      margin: 0;
+    }
+  }
+  a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    background-color: #4c4c4c;
+    padding: 10px 60px;
+    margin-bottom: 5px;
+    white-space: wrap;
+    border-radius: 10px;
+    border: 2px solid yellow;
+    transition: 1s;    
+    &:hover{
+      background-color: yellow;
+      color: black;
+      // font-weight: bold;
+    }
+    &:focus{
+      outline: none;
+      background-color: yellow;
+      color: black;
+      // font-weight: bold;
+    }
   }
 }
+.submenu {
+  // display: none;
+  list-style: none;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  min-width: 350px;
+  &__width{
+    min-width: 300px;
+  }
+
+
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  z-index: 3;
+}
+
 
 // carousel
 .carousel{
@@ -94,9 +173,15 @@ margin-bottom: 12px;
   }
   &__first{
     color: red;
+    &:hover{
+      color: red;
+    }
   }
   &__second{
     color:blue;
+    &:hover{
+      color: blue;
+    }
   }
 }
 
@@ -263,5 +348,333 @@ margin-bottom: 12px;
     }
 }
 
+
+
+// media
+@media (min-width: 990px) {
+  .burger{
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+
+.container{
+  // background-color: blue;
+  text-align: center;
+}
+
+// header
+.header__title{
+  margin: auto;
+  h1{
+    width: 500px;
+  }
+  // a{
+  //   color: red;
+  // }
+}
+.text3d-wrap-3 {
+  position: relative;
+  width: 60%;
+  height: 260px;
+  .text3d-3 {
+    transform: perspective(100px) rotateX(1deg) scaleY(0.8);
+    transition: all 0.5s;
+    font-family: Impact, Charcoal, sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 black;
+  }
+}
+// navigation
+.menu{
+  display: none;
+}
+// Burger
+.burger{
+  /* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 26px;
+  width: 86px;
+  height: 86px;
+  cursor: pointer;
+  z-index: 2;
+  // border: 2px solid #616161;
+  // border-radius: 50%;
+  // background-color: rgba(110, 230, 187, 1);
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: blue;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -12px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 12px;
+}
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #4c4c4c;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  z-index: 1;
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 30px 24px 5px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+}
+
+// carousel
+.carousel__header{
+  h3{
+    font-size: 20px;
+    padding: 10px;    
+  }
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: blue;
+    opacity: 0.6;
+    text-align: center;
+    margin: 25% 20%;    
+    width: 60%;
+    z-index: 0;
+    border-radius: 20px;    
+    transition: 1s;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  // blocks
+  .blocks {
+    display: block;
+    width: auto;
+    margin: 10px auto 30px;
+
+    h4{
+      margin: 50px;
+    }
+    img{
+      width: 450px;
+    }
+
+  }
+
+
+}
+
+
+@media (max-width: 576px) {
+  .container{
+  // background-color: blue;
+  text-align: center;
+  font-size: 18px;
+}
+
+// header
+.header__title{
+  margin: auto;
+  h1{
+    width: 400px;    
+  }
+  // a{
+  //   color: red;
+  // }
+}
+.text3d-wrap-3 {
+  position: relative;
+  width: 60%;
+  height: 260px;
+  .text3d-3 {
+    transform: perspective(100px) rotateX(1deg) scaleY(0.8);
+    transition: all 0.5s;
+    font-family: Impact, Charcoal, sans-serif;
+    letter-spacing: 3px;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 black;
+  }
+}
+// navigation
+.menu{
+  display: none;
+}
+// Burger
+.burger{
+  /* скрываем чекбокс */
+#menu__toggle {
+  opacity: 0;
+}
+/* стилизуем кнопку */
+.menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center;  /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 20px;
+  left: 26px;
+  width: 86px;
+  height: 86px;
+  cursor: pointer;
+  z-index: 2;
+  // border: 2px solid #616161;
+  // border-radius: 50%;
+  // background-color: rgba(110, 230, 187, 1);
+}
+/* добавляем "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: blue;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -12px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 12px;
+}
+/* контейнер меню */
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #4c4c4c;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  z-index: 1;
+}
+/* элементы меню */
+.menu__item {
+  display: block;
+  padding: 30px 24px 5px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+.menu__item:hover {
+  background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+}
+
+// carousel
+.carousel__header{
+  h3{
+    font-size: 20px;
+    padding: 10px;    
+  }
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background-color: blue;
+    opacity: 0.6;
+    text-align: center;
+    margin: 25% 20%;    
+    width: 60%;
+    z-index: 0;
+    border-radius: 20px;    
+    transition: 1s;
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  // blocks
+  .blocks {
+    display: block;
+    width: auto;
+    margin: 10px auto 30px;
+    h4{
+      margin: 30px;
+    }
+    img{
+      max-width: 380px; 
+    }
+}
+
+}
 
 
