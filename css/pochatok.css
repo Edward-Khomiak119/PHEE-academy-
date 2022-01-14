@@ -657,4 +657,81 @@ a:hover {
     margin-top: -80px;
     margin-bottom: 40px;
   }
+  iframe {
+    height: 300px;
+  }
+}
+
+.abiturient {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0 50px;
+}
+
+.abiturient a {
+  font-weight: bold;
+}
+
+.abiturient a:hover {
+  color: blue;
+  font-weight: bold;
+}
+
+.abiturient__opyt {
+  color: red;
+}
+
+.abiturient__red-text {
+  color: red;
+  font-weight: bold;
+}
+
+.abiturient__akadem h3 {
+  margin-bottom: 30px;
+}
+
+.abiturient__akadem h5 {
+  margin: 30px 0;
+}
+
+.abiturient__akadem h6 {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.abiturient__akadem a {
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: block;
+  text-decoration: underline;
+  font-weight: normal;
+  text-align: left;
+  color: blue;
+}
+
+.abiturient__akadem ol {
+  font-size: 16px;
+}
+
+.abiturient__akadem ol li {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.abiturient__akadem p {
+  text-align: left;
+  font-weight: bold;
+}
+
+@media (max-width: 990px) {
+  .abiturient {
+    font-size: 18px;
+  }
+  .abiturient iframe {
+    margin: auto;
+    max-width: 700px;
+    width: 100%;
+    min-width: 300px;
+  }
 }
