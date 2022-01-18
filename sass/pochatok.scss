@@ -659,6 +659,206 @@ a{
 
 }
 
+  // zviazok
+  .zviazok {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px 0 50px;
+    text-align: center;
+
+		&__uipa {
+      width: 400px;
+      h5{
+        margin-bottom: 30px;
+      }
+		}
+
+		&__fakultet {
+      width: 400px;
+        
+    }
+
+		&__do {
+      width: 400px;
+      h5{
+        margin-bottom: 50px;
+      }
+		}
+    img{
+      width: 250px;
+      height: 250px;
+    }
+    a{
+      color: blue;
+    }
+}
+
+// Kontakti
+.kontakti{
+  margin-bottom: 50px;
+  h3{
+    text-align: center;
+  }
+  iframe{
+    width: 100%;
+  }
+}
+
+// students-live
+.students-live{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 15px 0 30px;
+  img{
+    min-width: 200px;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+}
+
+// konsultanti
+.konsultanti {
+
+
+		&__vse {
+      margin: 20px 0;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      img{
+        width: 300px;
+        object-fit: contain;
+        height: 400px;
+        margin-bottom: 20px;
+      }
+      h5{
+        margin-bottom: 20px;
+      }
+		}
+
+		&__text {
+      margin: 50px 30px 50px;
+      h3{
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      h2{
+        text-align: center;
+        margin-bottom: 20px;
+        color: red;
+      }
+		}
+
+}
+
+// den-dverey
+.den-dverey {
+  text-align: center;
+  margin-bottom: 50px;
+  h2{
+    color: red;
+    margin: 30px 0;
+  }
+  a{
+    color: blue;
+  }
+  img{
+    margin-top: 30px;
+    width: 100%;
+    min-width: 300px;
+    min-height: 150px;
+  }
+  &__photos{
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    h5{      
+      width: 400px;
+      font-size: 18x;
+    }
+    img{
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+  iframe{
+    width: 100%;
+    max-width: 560px;
+    min-width: 300px;
+    margin-bottom: 30px;
+  }
+  .znaiomstvo{
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    h6{
+      width: 200px;
+      margin: auto;
+    }
+    iframe{
+      margin: 20px 0;
+      width: 200px;
+      height: 150px;
+    }
+  }
+}
+
+
+// kafedra
+.kafedra {
+  margin: 30px 0 50px;
+
+		&__kto-rabotaet {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+		}
+
+		&__kartinka {
+
+      margin-bottom: 30px;
+      img{
+        width: 100%;
+        max-width: 300px;
+        min-width: 200px;
+      }
+		}
+
+		&__text {
+      width: 100%;
+      max-width: 600px;
+      min-width: 200px;
+      h5{
+        text-align: center;
+      }
+      h6{
+        text-align: center;
+        margin: 20px 0;
+      }
+      a{
+        color: blue;
+      }
+		}
+    h3{
+      text-align: center;
+      margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+
 
 @media (max-width: 990px) {
   .abiturient{
@@ -670,6 +870,28 @@ a{
         min-width: 300px;
       }
   }
+  .zviazok {
+		&__uipa {
+      margin: auto;
+      padding-bottom: 50px;
+		}
+		&__fakultet {
+      margin: auto;
+      padding-bottom: 50px;
+		}
+		&__do {
+      margin: auto;
+      padding-bottom: 50px;
+		}
+  }
+
+  .den-dverey{
+    .znaiomstvo{
+      justify-content: center;
+    }
+  }
+
+
 }
 
 
