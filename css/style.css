@@ -149,6 +149,8 @@ a:hover {
 .blocks img {
   width: 550px;
   height: 350px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .blocks__first {
@@ -464,31 +466,37 @@ a:hover {
     top: 12px;
   }
   .burger .menu__box {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     position: fixed;
     visibility: hidden;
     top: 0;
     left: -100%;
-    width: 300px;
+    width: 90%;
     height: 100%;
-    margin: 0;
-    padding: 80px 0;
+    margin-top: 20px;
+    padding: 100px 10px 20px;
     list-style: none;
     text-align: center;
-    background-color: #4c4c4c;
+    background-color: lightgray;
     -webkit-box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
             box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
   .burger .menu__item {
-    display: block;
-    padding: 30px 24px 5px;
+    padding: 5px;
     color: #333;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 12px;
     text-decoration: none;
-    color: white;
+    color: black;
+    border: 2px solid red;
   }
   .burger .menu__item:hover {
     background-color: #CFD8DC;

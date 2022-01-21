@@ -959,6 +959,195 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.nauka {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+}
+
+.nauka h5 {
+  color: blue;
+  font-weight: bold;
+}
+
+.nauka__kan1 {
+  width: 300px;
+  background-color: yellow;
+  border-radius: 10%;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.nauka__kan2 {
+  width: 300px;
+  background-color: yellow;
+  border-radius: 10%;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.nauka__kan3 {
+  width: 300px;
+  background-color: yellow;
+  border-radius: 10%;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.nauka__kan4 {
+  width: 300px;
+  background-color: yellow;
+  border-radius: 10%;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.nauka__kan5 {
+  width: 300px;
+  background-color: yellow;
+  border-radius: 10%;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.nauka__shkoli p {
+  text-align: left;
+}
+
+.specialnosti {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.specialnosti__kartinka img {
+  width: 100%;
+  max-width: 600px;
+  min-width: 200px;
+}
+
+.specialnosti__text {
+  width: 100%;
+  max-width: 600px;
+  min-width: 200px;
+}
+
+.specialnosti__text h5 {
+  text-align: center;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.page h6 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.page img {
+  width: 100%px;
+  max-width: 400px;
+  min-width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.page__down1 {
+  width: 400px;
+}
+
+.page__down2 {
+  width: 400px;
+}
+
+.page__down3 {
+  width: 400px;
+}
+
+.uchtexnics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.uchtexnics__kartinka img {
+  width: 100%;
+  max-width: 600px;
+  min-width: 200px;
+}
+
+.uchtexnics__text {
+  width: 100%;
+  max-width: 600px;
+  min-width: 200px;
+}
+
+.uchtexnics__text h5 {
+  text-align: center;
+}
+
+.uchtexnics-page {
+  margin-bottom: 40px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.uchtexnics-page img {
+  width: 100%;
+  max-width: 300px;
+  min-width: 200px;
+  height: 100%;
+  max-height: 200px;
+  min-height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.uchtexnics-page__down1 {
+  width: 400px;
+}
+
+.uchtexnics-page__down2 {
+  width: 400px;
+}
+
+.uchtexnics-page__down3 {
+  width: 400px;
+}
+
 @media (max-width: 990px) {
   .abiturient {
     font-size: 18px;
@@ -982,6 +1171,11 @@ a:hover {
     padding-bottom: 50px;
   }
   .den-dverey .znaiomstvo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nauka {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
