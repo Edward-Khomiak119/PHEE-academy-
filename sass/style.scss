@@ -1,8 +1,7 @@
 body{
-  background-color: gray;
+  background-color: lightgray;
   box-sizing: border-box;
   // overflow-x: hidden;
-  // min-width:  800px;
 }
 .container{
   background-color: #fff;
@@ -157,7 +156,7 @@ a{
     &:hover{
       opacity: 1;
     }
-  }  
+  } 
 }
 
 // Blocks
@@ -170,7 +169,7 @@ a{
   img{
     width: 550px;
     height: 350px;
-    object-fit: contain;
+    object-fit: cover;
   }
   &__first{
     color: red;
@@ -452,12 +451,12 @@ a{
 /* элементы меню */
 .menu__item {
   padding: 5px;
-  color: #333;
+  // color: #333;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   text-decoration: none;
   color: black;
-  border: 2px solid red;
+  // border: 2px solid red;
 }
 .menu__item:hover {
   background-color: #CFD8DC;
@@ -506,13 +505,14 @@ a{
   .blocks {
     display: block;
     width: auto;
-    margin: 10px auto 30px;
-
+    margin: 10px auto;
     h4{
-      margin: 50px;
+      margin: 30px;
     }
     img{
-      width: 450px;
+      width: 100%;
+      max-width: 450px;
+      min-width: 200px;
     }
 
   }
@@ -581,7 +581,7 @@ a{
 .menu__btn > span::after {
   display: block;
   position: absolute;
-  width: 100%;
+  width: 50px;
   height: 5px;
   background-color: blue;
 }
@@ -663,20 +663,6 @@ a{
       opacity: 1;
     }
   }
-
-  // blocks
-  .blocks {
-    display: block;
-    width: auto;
-    margin: 10px auto 30px;
-    h4{
-      margin: 30px;
-    }
-    img{
-      max-width: 380px; 
-    }
-}
-
 }
 
 
